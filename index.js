@@ -2,10 +2,10 @@ const subject = document.getElementById('subject');
 const timer = document.getElementById('timer');
 const form = document.forms.typing;
 const textList = [
-  'Hello World',
-  'Good',
-  'I love JavaScript',
-  'This is MyApp',
+  'Apple',
+  'Window',
+  'Myself',
+  'Hellow',
   'Welcome'
 ];
 
@@ -26,7 +26,7 @@ form.btn.addEventListener('click', function(e) {
     count++;
     init();
   } else {
-    subject.textContent = '間違いです！';
+    result.textContent = '×';
     setTimeout(function(){ init() },1000)
   }
 });
