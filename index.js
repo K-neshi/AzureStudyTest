@@ -37,7 +37,7 @@ function finish() {
   clearInterval(countdown);
   //正確率を算出
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
-  text.textContent = 'ゲーム終了!' + \r\n + '正確率は' + accuracy + '%でした！';
+  text.textContent = 'ゲーム終了！　正確率は' + accuracy + '%でした！';
   state = false;
 }
 
