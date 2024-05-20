@@ -19,8 +19,8 @@ const countdown = setInterval(function() {
   if(TIME <= 0) finish();
 }, 1000);
 
-function changeColor(juge){
-  if(juge === '○'){
+function changeColor(judg){
+  if(judg === '○'){
     //文字を赤色に変更する
     document.getElementById('result').style.color = 'RED';
     result.textContent = '○';
@@ -35,13 +35,13 @@ form.btn.addEventListener('click', function(e) {
   if(!state) return;
 
   if(form.input.value === subject.textContent) {
-    jude = '○';
-    changeColor(juge);
+    judg = '○';
+    changeColor(judg);
     init();
     count++;
   } else {
-    jude = '×';
-    changeColor(juge);
+    judg = '×';
+    changeColor(judg);
     setTimeout(function(){ init() },1000)
   }
 });
