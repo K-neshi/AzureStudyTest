@@ -12,7 +12,7 @@ const textList = [
 let TIME = 20;
 let count = 0;
 let state = true;
-let judg = ;
+let judg = '';
 
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
