@@ -46,7 +46,7 @@ function createText() {
   text.textContent = '';
 
   //文字列を1文字ずつに分解して、それぞれにspanタグを挿入する
-  checkTexts = textList[rnd].split('').map(function(value) {
+  checkText = textList[rnd].split('').map(function(value) {
     var span = document.createElement('span');
     span.textContent = value;
     text.appendChild(span);
@@ -65,7 +65,7 @@ window.addEventListener('keydown', e => {
   if(!state)return;
   
   if(e.key === checkText[0].textContent) { 
-    console.log("score");
+    console.log("count");
     checkText[0].className = 'add-blue';
 
     //正解
