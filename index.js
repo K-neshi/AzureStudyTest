@@ -32,7 +32,7 @@ form.btn.addEventListener('click', function(e) {
   }
 });
 
-
+init();
 
 function init() {
   const rnd = Math.floor(Math.random() * textList.length);
