@@ -1,5 +1,6 @@
 const text = document.getElementById('text');
 const timer = document.getElementById('timer');
+const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
 const form = document.forms.typing;
@@ -43,6 +44,7 @@ function createText() {
   const rnd = Math.floor(Math.random() * textList.length);
   //全問題数をカウント
   count++;
+  resultLabel.textContent = count;
 
   //前の文字列を削除してから次の文字列を表示する
   text.textContent = '';
@@ -55,10 +57,6 @@ function createText() {
 
     return span;
   });
-
- /* text.textContent = textList[rnd];
-  form.input.value = '';
-  form.input.focus();*/
 }
 
 
@@ -94,11 +92,11 @@ window.addEventListener('keydown', e => {
 function changeColor(judg){
   if(judg === '○'){
     //文字を赤色に変更する
-    document.getElementById('result').style.color = 'RED';
-    result.textContent = '○';
+    document.getElementById('judg').style.color = 'RED';
+    judg.textContent = '○';
   } else {
     //文字を青色に変更する
-    document.getElementById('result').style.color = 'BLUE';
-    result.textContent = '×';
+    document.getElementById('judg').style.color = 'BLUE';
+    judg.textContent = '×';
   }
 }
