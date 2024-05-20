@@ -25,8 +25,6 @@ let miss = 0;
 
 var checkText = [];
 
-createText();
-
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
@@ -93,7 +91,7 @@ window.addEventListener('keydown', e => {
 });
 
 //文字の色を変える
-function changeColor(judg){
+/*function changeColor(judg){
   if(judg === '○'){
     //文字を赤色に変更する
     document.getElementById('judg').style.color = 'RED';
@@ -103,4 +101,4 @@ function changeColor(judg){
     document.getElementById('judg').style.color = 'BLUE';
     judg.textContent = '×';
   }
-}
+}*/
