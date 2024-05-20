@@ -1,3 +1,4 @@
+const text = document.getElementById('btn');
 const text = document.getElementById('text');
 const text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
@@ -25,6 +26,7 @@ let miss = 0;
 
 var checkText = [];
 
+btn.addEventListener('click', function(e) {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
@@ -89,6 +91,7 @@ window.addEventListener('keydown', e => {
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
 });
+}
 
 //文字の色を変える
 /*function changeColor(judg){
