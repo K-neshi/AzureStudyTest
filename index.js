@@ -93,7 +93,7 @@ window.addEventListener('keydown', e => {
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
 });
-}
+});
 
 //文字の色を変える
 /*function changeColor(judg){
