@@ -9,21 +9,23 @@ const textList = [
   'Welcome'
 ];
 
-let TIME = 20;
+let TIME = 60;
 let count = 0;
 let state = true;
 let judg = '';
 
-init();
+createText();
 
+//制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
 }, 1000);
 
+//ゲーム終了
 function finish() {
   clearInterval(countdown);
-  subject.textContent = '正解数は' + count + '個でした！';
+  subject.textContent = 'ゲーム終了！\n'+'正解数は' + count + '個でした！';
   state = false;
 }
 
