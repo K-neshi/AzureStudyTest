@@ -14,6 +14,8 @@ let count = 0;
 let state = true;
 let judg = '';
 
+init();
+
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
@@ -46,8 +48,6 @@ form.btn.addEventListener('click', function(e) {
   }
 });
 
-init();
-
 function init() {
   const rnd = Math.floor(Math.random() * textList.length);
 
@@ -57,6 +57,7 @@ function init() {
 }
 
 function finish() {
+  console.log(count);
   clearInterval(countdown);
   subject.textContent = '正解数は' + count + '個でした！';
   state = false;
