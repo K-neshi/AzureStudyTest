@@ -28,8 +28,7 @@ var checkText = [];
 
 btn.addEventListener('click', function(e) {
   //ボタン削除処理
-  let parent = btn.parentNode;
-  parent.remove();
+  btn.remove();
   
   createText()
   
