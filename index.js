@@ -27,8 +27,11 @@ let miss = 0;
 var checkText = [];
 
 btn.addEventListener('click', function(e) {
+  //ボタン削除処理
+  let parent = btn.parentNode;
+  parent.remove();
+  
   createText()
-});
   
 //制限時間のカウント
 const countdown = setInterval(function() {
@@ -93,6 +96,7 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
+});
 });
 
 //文字の色を変える
