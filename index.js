@@ -24,8 +24,7 @@ const countdown = setInterval(function() {
 
 //ゲーム終了
 function finish() {
-  clearInterval(countdown);
-  subject.textContent = 'ゲーム終了！\n'+'正解数は' + count + '個でした！';
+  subject.textContent = 'ゲーム終了！\r\n'+'正解数は' + count + '個でした！';
   state = false;
 }
 
