@@ -17,7 +17,7 @@ const textList = [
 let TIME = 60;
 let count = 0;
 let state = true;
-let judg = '';
+//let judg = '';
 
 let score = 0;
 let miss = 0;
@@ -37,7 +37,7 @@ function finish() {
   clearInterval(countdown);
   //正確率を算出
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
-  text.textContent = 'ゲーム終了！　正確率は' + accuracy + '%でした！';
+  text.textContent = 'ゲーム終了！　正確率は' + Math.round(accuracy) + '%でした！';
   state = false;
 }
 
@@ -73,8 +73,8 @@ window.addEventListener('keydown', e => {
     //正解
     score++;
     scoreLabel.textContent = score;
-    judg = '○';
-    changeColor(judg);
+    /*judg = '○';
+    changeColor(judg);*/
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
     checkText.shift(); 
@@ -82,8 +82,8 @@ window.addEventListener('keydown', e => {
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    judg = '×';
-    changeColor(judg);
+    /*judg = '×';
+    changeColor(judg);*/
   }
   
   //配列要素が空っぽになったら次の問題を出す
