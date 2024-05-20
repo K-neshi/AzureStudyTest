@@ -23,15 +23,16 @@ form.btn.addEventListener('click', function(e) {
   if(!state) return;
 
   if(form.input.value === subject.textContent) {
-    count++;
+    result.textContent = '○';
     init();
+    count++;
   } else {
     result.textContent = '×';
     setTimeout(function(){ init() },1000)
   }
 });
 
-init();
+
 
 function init() {
   const rnd = Math.floor(Math.random() * textList.length);
