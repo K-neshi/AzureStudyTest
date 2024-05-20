@@ -1,4 +1,5 @@
 const text = document.getElementById('text');
+const text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
 const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
@@ -37,7 +38,8 @@ function finish() {
   clearInterval(countdown);
   //正確率を算出
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
-  text.textContent = 'ゲーム終了！　正確率は' + Math.round(accuracy) + '%でした！';
+  text.textContent = 'ゲーム終了！';
+  text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
   state = false;
 }
 
