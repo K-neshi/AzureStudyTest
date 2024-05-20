@@ -12,22 +12,36 @@ const textList = [
 let TIME = 20;
 let count = 0;
 let state = true;
+let judg = ;
 
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
 }, 1000);
 
+function changeColor(juge){
+  if(juge === '○'){
+    //文字を赤色に変更する
+    document.getElementById('result').style.color = 'RED';
+    result.textContent = '○';
+  } else {
+    //文字を青色に変更する
+    document.getElementById('result').style.color = 'BLUE';
+    result.textContent = '×';
+  }
+}
 
 form.btn.addEventListener('click', function(e) {
   if(!state) return;
 
   if(form.input.value === subject.textContent) {
-    result.textContent = '○';
+    jude = '○';
+    changeColor(juge);
     init();
     count++;
   } else {
-    result.textContent = '×';
+    jude = '×';
+    changeColor(juge);
     setTimeout(function(){ init() },1000)
   }
 });
