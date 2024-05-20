@@ -27,6 +27,8 @@ let miss = 0;
 var checkText = [];
 
 btn.addEventListener('click', function(e) {
+  createText()
+  
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
