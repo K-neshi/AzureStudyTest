@@ -35,7 +35,9 @@ const countdown = setInterval(function() {
 //ゲーム終了
 function finish() {
   clearInterval(countdown);
-  text.textContent = 'ゲーム終了！\r\n'+'正解数は' + score + '個でした！';
+  //正確率を算出
+  const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
+  text.textContent = 'ゲーム終了!' + \r\n + '正確率は' + accuracy + '%でした！';
   state = false;
 }
 
