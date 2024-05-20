@@ -19,7 +19,6 @@ init();
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
-  console.log(count);
 }, 1000);
 
 function changeColor(judg){
@@ -40,8 +39,8 @@ form.btn.addEventListener('click', function(e) {
   if(form.input.value === subject.textContent) {
     judg = '○';
     changeColor(judg);
-    init();
     count++;
+    init();
     console.log(count);
   } else {
     judg = '×';
