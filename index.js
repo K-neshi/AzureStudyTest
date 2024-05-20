@@ -4,11 +4,13 @@ const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
 const form = document.forms.typing;
 const textList = [
-  'Apple',
-  'Window',
-  'Myself',
-  'Hellow',
-  'Welcome'
+  'apple',
+  'window',
+  'myself',
+  'hellow',
+  'welcome',
+  'orange',
+  'good'
 ];
 
 let TIME = 60;
