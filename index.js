@@ -1,4 +1,4 @@
-const text = document.getElementById('btn');
+const btn = document.getElementById('btn');
 const text = document.getElementById('text');
 const text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
