@@ -15,7 +15,7 @@ const textList = [
   'good'
 ];
 
-let TIME = 60;
+let TIME = 30;
 let count = 0;
 let state = true;
 //let judg = '';
