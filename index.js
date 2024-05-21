@@ -1,4 +1,4 @@
-const btn = document.getElementById('btn');
+const element = document.getElementById('element');
 const text = document.getElementById('text');
 const text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
@@ -28,7 +28,7 @@ var checkText = [];
 
 btn.addEventListener('click', function(e) {
   //ボタン削除処理
-  btn.remove();
+  element.remove();
   
   createText()
   
