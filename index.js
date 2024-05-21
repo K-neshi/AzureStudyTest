@@ -50,7 +50,8 @@ function finish() {
   var newElement = document.createElement("div"); // div要素作成
 　newElement.setAttribute("id","element"); // div要素にidを設定
   newElement.setAttribute("class","element");// div要素にclassを設定
-  form.insertBefore(newElement,form);// form要素の前に追加
+  const text = document.getElementById('text');
+  form.insertBefore(newElement,form.nextSibling);// form要素の前に追加
 }
 
 function createText() {
