@@ -46,6 +46,11 @@ function finish() {
   text.textContent = 'ゲーム終了！';
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
   state = false;
+  //ボタン作成
+  var newElement = document.createElement("div"); // div要素作成
+　newElement.setAttribute("id","element"); // div要素にidを設定
+  newElement.setAttribute("class","element");// div要素にclassを設定
+  form.insertBefore(newElement,form);// form要素の前に追加
 }
 
 function createText() {
