@@ -27,7 +27,7 @@ let miss = 0;
 
 var checkText = [];
 
-btn.addEventListener('click', function(e) {
+function btnpush() {
   //ボタン削除処理
   btn.remove();
   
