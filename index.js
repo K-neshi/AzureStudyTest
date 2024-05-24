@@ -1,4 +1,5 @@
 const element = document.getElementById('element');
+const btn = document.getElementById('btn');
 const text = document.getElementById('text');
 const text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
