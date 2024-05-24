@@ -6,7 +6,7 @@ const timer = document.getElementById('timer');
 const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
-const form = document.forms.typing;
+//const form = document.forms.typing;
 const textList = [
   'apple',
   'window',
@@ -17,17 +17,24 @@ const textList = [
   'good'
 ];
 
-let TIME = 30;
-let count = 0;
+let TIME;
+let count;
 let state = true;
 //let judg = '';
 
-let score = 0;
-let miss = 0;
+let score;
+let miss;
 
-var checkText = [];
+var checkText;
 
 function btnpush() {
+  //各項目の初期化
+  TIME = 30;
+  count = 0;
+  score = 0;
+  miss = 0;
+  checkText = [];
+  
   //ボタン削除処理
   btn.remove();
   
