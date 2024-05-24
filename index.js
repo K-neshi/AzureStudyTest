@@ -47,10 +47,15 @@ function finish() {
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
   state = false;
   //ボタン作成
-  var newElement = document.createElement("div"); // div要素作成
+  /*var newElement = document.createElement("div"); // div要素作成
 　newElement.setAttribute("id","element"); // div要素にidを設定
   newElement.setAttribute("class","element");// div要素にclassを設定
-  text2.before(newElement);// text2要素の後に追加
+  text2.before(newElement);// text2要素の後に追加*/
+  var newElement2 = document.createElement("input"); // input要素作成
+  newElement2.setAttribute("id","btn"); // input要素にidを設定
+  newElement2.setAttribute("type","button"); // input要素にtypeを設定
+  newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
+  element.before(newElement2);// element要素の後に追加
 }
 
 function createText() {
