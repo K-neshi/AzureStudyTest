@@ -82,6 +82,7 @@ function finish() {
   newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
   newElement2.setAttribute("onclick","btnpush()"); // input要素にonclickを設定
   element.append(newElement2);// element要素の後に追加
+  btn = document.getElementById('btn');
   state = false;
 }
 
