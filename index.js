@@ -37,6 +37,11 @@ function btnpush() {
   
   //ボタン削除処理
   btn.remove();
+
+  if (text2 !== null){
+	　// text2が存在する場合のみtext2要素を削除
+    text2.remove();
+  }
   
   createText()
   
@@ -64,6 +69,9 @@ function finish() {
   newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
   newElement2.setAttribute("onclick","btnpush()"); // input要素にonclickを設定
   element.append(newElement2);// element要素の後に追加
+  var newElement3 = document.createElement("h2"); // h2要素作成
+  newElement3.setAttribute("id","text2"); // h2要素にidを設定
+  text.after(newElement3);// text要素の後に追加
   state = false;
 }
 
