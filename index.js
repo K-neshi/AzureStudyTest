@@ -28,7 +28,7 @@ var checkText = [];
 
 btn.addEventListener('click', function(e) {
   //ボタン削除処理
-  element.remove();
+  var newelement = element.detach();
   
   createText()
   
@@ -49,12 +49,12 @@ function finish() {
   /*var newElement = document.createElement("div"); // div要素作成
 　newElement.setAttribute("id","element"); // div要素にidを設定
   newElement.setAttribute("class","element");// div要素にclassを設定
-  text2.before(newElement);// text2要素の後に追加*/
+  text2.before(newElement);// text2要素の後に追加
   var newElement2 = document.createElement("input"); // input要素作成
   newElement2.setAttribute("id","btn"); // input要素にidを設定
   newElement2.setAttribute("type","button"); // input要素にtypeを設定
-  newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
-  element.before(newElement2);// element要素の後に追加
+  newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定*/
+  element.append(newelement);// element要素の後に追加
   state = false;
 }
 
