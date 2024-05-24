@@ -1,6 +1,7 @@
 const element = document.getElementById('element');
 var btn = document.getElementById('btn');
 const text = document.getElementById('text');
+const element2 = document.getElementById('element2');
 var text2 = document.getElementById('text2');
 const timer = document.getElementById('timer');
 const resultLabel = document.getElementById("result");
@@ -64,7 +65,7 @@ function finish() {
 　//text2要素作成
 　var newElement3 = document.createElement("h2"); // h2要素作成
   newElement3.setAttribute("id","text2"); // h2要素にidを設定
-  text.append(newElement3);// text要素の後に追加
+  element2.append(newElement3);// element2要素の後に追加
 　
   text.textContent = 'ゲーム終了！';
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
