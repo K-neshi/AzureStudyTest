@@ -45,7 +45,6 @@ function finish() {
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
   text.textContent = 'ゲーム終了！';
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
-  state = false;
   //ボタン作成
   /*var newElement = document.createElement("div"); // div要素作成
 　newElement.setAttribute("id","element"); // div要素にidを設定
@@ -56,6 +55,7 @@ function finish() {
   newElement2.setAttribute("type","button"); // input要素にtypeを設定
   newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
   element.before(newElement2);// element要素の後に追加
+  state = false;
 }
 
 function createText() {
