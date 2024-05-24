@@ -54,10 +54,18 @@ const countdown = setInterval(function() {
 //ゲーム終了
 function finish() {
   clearInterval(countdown);
-  //正確率を算出
+  
+　//正確率を算出
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
+  
+　//text2要素作成
+　var newElement3 = document.createElement("h2"); // h2要素作成
+  newElement3.setAttribute("id","text2"); // h2要素にidを設定
+  text.after(newElement3);// text要素の後に追加
+　
   text.textContent = 'ゲーム終了！';
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
+
   //ボタン作成
   /*var newElement = document.createElement("div"); // div要素作成
 　newElement.setAttribute("id","element"); // div要素にidを設定
@@ -69,9 +77,6 @@ function finish() {
   newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
   newElement2.setAttribute("onclick","btnpush()"); // input要素にonclickを設定
   element.append(newElement2);// element要素の後に追加
-  var newElement3 = document.createElement("h2"); // h2要素作成
-  newElement3.setAttribute("id","text2"); // h2要素にidを設定
-  text.after(newElement3);// text要素の後に追加
   state = false;
 }
 
