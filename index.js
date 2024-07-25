@@ -105,9 +105,8 @@ function createText() {
 
 //キーボードからの入力は「e.key」に格納されている
 window.addEventListener('keydown', e => {
-  if(!state)return;
-  
   if(e.key === checkText[0].textContent) { 
+    if(!state)return;
     checkText[0].className = 'add-blue';
 
     //正解
@@ -117,6 +116,8 @@ window.addEventListener('keydown', e => {
     //0番目の配列要素を削除して、次の1文字を比較対象にする
     checkText.shift();
   }else{
+    if(!state)return;
+    
     //タイプミス
     miss++;
     missLabel.textContent = miss;
@@ -124,20 +125,6 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
-  e.stopPropagation();
-  e.preventDefault();
 });
+  
 };
-
-//文字の色を変える
-/*function changeColor(judg){
-  if(judg === '○'){
-    //文字を赤色に変更する
-    document.getElementById('judg').style.color = 'RED';
-    judg.textContent = '○';
-  } else {
-    //文字を青色に変更する
-    document.getElementById('judg').style.color = 'BLUE';
-    judg.textContent = '×';
-  }
-}*/
