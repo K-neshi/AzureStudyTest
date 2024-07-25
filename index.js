@@ -124,7 +124,8 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
-  break;
+  e.stopPropagation();
+  e.preventDefault();
 });
 };
 
