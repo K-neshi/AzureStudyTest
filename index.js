@@ -7,7 +7,7 @@ const timer = document.getElementById('timer');
 const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
-//const form = document.forms.typing;
+
 const textList = [
   'apple',
   'window',
@@ -21,7 +21,6 @@ const textList = [
 let TIME;
 let count;
 let state = true;
-//let judg = '';
 
 let score;
 let miss;
@@ -73,10 +72,6 @@ function finish() {
   text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
 
   //ボタン作成
-  /*var newElement = document.createElement("div"); // div要素作成
-　newElement.setAttribute("id","element"); // div要素にidを設定
-  newElement.setAttribute("class","element");// div要素にclassを設定
-  text2.before(newElement);// text2要素の後に追加*/
   var newElement2 = document.createElement("input"); // input要素作成
   newElement2.setAttribute("id","btn"); // input要素にidを設定
   newElement2.setAttribute("type","button"); // input要素にtypeを設定
@@ -118,17 +113,15 @@ window.addEventListener('keydown', e => {
     //正解
     score++;
     scoreLabel.textContent = score;
-    /*judg = '○';
-    changeColor(judg);*/
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
     checkText.shift(); 
+    state = false;
   }else{
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    /*judg = '×';
-    changeColor(judg);*/
+    state = false;
   }
   
   //配列要素が空っぽになったら次の問題を出す
