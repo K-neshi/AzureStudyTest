@@ -116,12 +116,10 @@ window.addEventListener('keydown', e => {
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
     checkText.shift(); 
-    state = false;
   }else{
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    state = false;
   }
   
   //配列要素が空っぽになったら次の問題を出す
