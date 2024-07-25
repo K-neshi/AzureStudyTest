@@ -115,7 +115,7 @@ window.addEventListener('keydown', e => {
     scoreLabel.textContent = score;
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
-    checkText.shift(); 
+    checkText.shift();
   }else{
     //タイプミス
     miss++;
@@ -124,6 +124,7 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkText.length) createText();
+  break;
 });
 };
 
