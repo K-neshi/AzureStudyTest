@@ -112,7 +112,6 @@ window.addEventListener('keydown', e => {
   if(!state)return;
   
   if(e.key === checkText[0].textContent) { 
-    console.log("count");
     checkText[0].className = 'add-blue';
 
     //正解
