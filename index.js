@@ -29,6 +29,7 @@ let miss;
 var checkText;
 
 function btnpush() {
+  state = true;
   //各項目の初期化
   TIME = 30;
   count = 0;
