@@ -29,13 +29,12 @@ let miss;
 var checkText;
 
 function btnpush() {
-  state = true;
   //各項目の初期化
   TIME = 30;
   count = 0;
   score = 0;
   miss = 0;
-  checkText = [];
+  checkText;
   resultLabel.textContent = count;
   scoreLabel.textContent = score;
   missLabel.textContent = miss;
@@ -49,6 +48,7 @@ function btnpush() {
   }
   
   createText()
+  state = true;
   
 //制限時間のカウント
 const countdown = setInterval(function() {
