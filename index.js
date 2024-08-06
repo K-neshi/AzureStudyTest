@@ -111,7 +111,7 @@ window.addEventListener('keydown', e => {
   }
   
   if(e.key === checkTexts[0].textContent) { 
-    //checkTexts[0].className = 'add-blue';
+    checkTexts[0].className = 'add-blue';
 
     //正解
     score++;
