@@ -25,7 +25,7 @@ let state = true;
 let score;
 let miss;
 
-var checkText;
+var checkText = [];
 
 function btnpush() {
   //各項目の初期化
@@ -33,7 +33,6 @@ function btnpush() {
   count = 0;
   score = 0;
   miss = 0;
-  checkText;
   resultLabel.textContent = count;
   scoreLabel.textContent = score;
   missLabel.textContent = miss;
