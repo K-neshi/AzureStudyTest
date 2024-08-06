@@ -131,7 +131,7 @@ window.addEventListener('keydown', e => {
   if(!checkTexts.length) {
     createText();
   } else {
-    function();
+    setInterval();
   }
 });
   
