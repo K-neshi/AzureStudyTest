@@ -115,7 +115,6 @@ window.addEventListener('keydown', e => {
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
     checkText.shift();
-    return;
   }else{
     if(!state)return;
     
