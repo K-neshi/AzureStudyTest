@@ -121,8 +121,7 @@ window.addEventListener('keydown', e => {
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-
-    return;
+    
   }
   
   //配列要素が空っぽになったら次の問題を出す
