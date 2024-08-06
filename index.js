@@ -47,14 +47,17 @@ function btnpush() {
     text2.remove();
   }
   
-  createText()
+  createText();
   state = true;
-  
+  countdown();
+
+function countdown() {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
 }, 1000);
+}
 
 //ゲーム終了
 function finish() {
@@ -128,7 +131,11 @@ window.addEventListener('keydown', e => {
   }
   
   //配列要素が空っぽになったら次の問題を出す
-  if(!checkTexts.length) createText();
+  if(!checkTexts.length) {
+    createText();
+  } else {
+    countdown();
+  }
 });
   
 };
