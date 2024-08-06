@@ -8,7 +8,7 @@ const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
 
-const textList = [
+const textLists = [
   'apple',
   'window',
   'myself',
@@ -21,11 +21,12 @@ const textList = [
 let TIME;
 let count;
 let state = true;
+let rnd;
 
 let score;
 let miss;
 
-var checkText = [];
+var checkTexts = [];
 
 function btnpush() {
   //各項目の初期化
@@ -36,6 +37,7 @@ function btnpush() {
   resultLabel.textContent = count;
   scoreLabel.textContent = score;
   missLabel.textContent = miss;
+  checkTexts = [];
   
   //ボタン削除処理
   btn.remove();
@@ -83,7 +85,7 @@ function finish() {
 
 function createText() {
   //ランダムに問題を出題
-  const rnd = Math.floor(Math.random() * textList.length);
+  rnd = Math.floor(Math.random() * textLists.length);
   //全問題数をカウント
   count++;
   resultLabel.textContent = count;
@@ -92,7 +94,7 @@ function createText() {
   text.textContent = '';
 
   //文字列を1文字ずつに分解して、それぞれにspanタグを挿入する
-  checkText = textList[rnd].split('').map(function(value) {
+  checkTexts = textLists[rnd].split('').map(function(value) {
     var span = document.createElement('span');
     span.textContent = value;
     text.appendChild(span);
@@ -104,18 +106,20 @@ function createText() {
 
 //キーボードからの入力は「e.key」に格納されている
 window.addEventListener('keydown', e => {
-  if(e.key === checkText[0].textContent) { 
-    if(!state)return;
-    checkText[0].className = 'add-blue';
+  if(state !== true){
+    return;
+  }
+  
+  if(e.key === checkTexts[0].textContent) { 
+    //checkTexts[0].className = 'add-blue';
 
     //正解
     score++;
     scoreLabel.textContent = score;
     
     //0番目の配列要素を削除して、次の1文字を比較対象にする
-    checkText.shift();
+    checkTexts.shift();
   }else{
-    if(!state)return;
     
     //タイプミス
     miss++;
@@ -124,7 +128,7 @@ window.addEventListener('keydown', e => {
   }
   
   //配列要素が空っぽになったら次の問題を出す
-  if(!checkText.length) createText();
+  if(!checkTexts.length) createText();
 });
   
 };
