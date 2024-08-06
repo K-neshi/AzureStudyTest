@@ -49,15 +49,12 @@ function btnpush() {
   
   createText();
   state = true;
-  countdown();
 
-function countdown() {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
 }, 1000);
-}
 
 //ゲーム終了
 function finish() {
@@ -134,7 +131,7 @@ window.addEventListener('keydown', e => {
   if(!checkTexts.length) {
     createText();
   } else {
-    countdown();
+    function();
   }
 });
   
