@@ -27,6 +27,7 @@ let score;
 let miss;
 
 var checkTexts = [];
+var i;
 
 function btnpush() {
   //各項目の初期化
@@ -34,6 +35,7 @@ function btnpush() {
   count = 0;
   score = 0;
   miss = 0;
+  i = 0;
   resultLabel.textContent = count;
   scoreLabel.textContent = score;
   missLabel.textContent = miss;
@@ -53,6 +55,7 @@ function btnpush() {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
+  i = 0;
   if(TIME <= 0) finish();
 }, 1000);
 
@@ -84,6 +87,7 @@ function finish() {
 }
 
 function createText() {
+  i = 0;
   //ランダムに問題を出題
   rnd = Math.floor(Math.random() * textLists.length);
   //全問題数をカウント
@@ -109,6 +113,7 @@ window.addEventListener('keydown', e => {
     return;
   }
 
+  if(i == 0){
   if(e.key === checkTexts[0].textContent) {
     if(!state)return;
     checkTexts[0].className = 'add-blue';
@@ -121,15 +126,16 @@ window.addEventListener('keydown', e => {
     checkTexts.shift();
     //配列要素が空っぽになったら次の問題を出す
     if(!checkTexts.length)createText();
-    return;
+  　i++;
   }else{
     if(!state)return;
     
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    return;
+    i++;
   }
+}
   
 });
 };
