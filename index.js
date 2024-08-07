@@ -57,8 +57,6 @@ const countdown = setInterval(function() {
   if(TIME <= 0) finish();
 }, 1000);
 
-i = 0;
-
 //ゲーム終了
 function finish() {
   clearInterval(countdown);
@@ -139,5 +137,6 @@ window.addEventListener('keydown', e => {
   if(!checkTexts.length) createText();
   
 });
-  
+
+i = 0;
 };
