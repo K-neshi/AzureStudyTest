@@ -118,23 +118,21 @@ window.addEventListener('keydown', e => {
     i++; 
     checkTexts[0].className = 'add-blue';
 
-    if(i == 1) {
+    if(i !== 1)return;
       //正解
       score++;
       scoreLabel.textContent = score;
     
       //0番目の配列要素を削除して、次の1文字を比較対象にする
-      checkTexts.shift();
-    }    
+      checkTexts.shift(); 
   }else{
     if(!state)return;
     i++; 
 
-    if(i == 1) {
+    if(i !== 1)return;
       //タイプミス
       miss++;
       missLabel.textContent = miss;
-    }
   }
   
   //配列要素が空っぽになったら次の問題を出す
