@@ -27,6 +27,7 @@ let score;
 let miss;
 
 var checkTexts = [];
+var i;
 
 function btnpush() {
   //各項目の初期化
@@ -55,6 +56,8 @@ const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
   if(TIME <= 0) finish();
 }, 1000);
+
+i = 0;
 
 //ゲーム終了
 function finish() {
@@ -106,7 +109,6 @@ function createText() {
 
 //キーボードからの入力は「e.key」に格納されている
 window.addEventListener('keydown', e => {
-  var i = 0;
   if(state !== true){
     return;
   }
