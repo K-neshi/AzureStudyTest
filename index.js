@@ -103,7 +103,6 @@ function createText() {
   });
 }
 
-
 //キーボードからの入力は「e.key」に格納されている
 window.addEventListener('keydown', e => {
   if(state !== true){
@@ -114,24 +113,23 @@ window.addEventListener('keydown', e => {
     if(!state)return;
     checkTexts[0].className = 'add-blue';
 
-      //正解
-      score++;
-      scoreLabel.textContent = score;
+    //正解
+    score++;
+    scoreLabel.textContent = score;
     
-      //0番目の配列要素を削除して、次の1文字を比較対象にする
-      checkTexts.shift();
-      return;
+    //0番目の配列要素を削除して、次の1文字を比較対象にする
+    checkTexts.shift();
+    //配列要素が空っぽになったら次の問題を出す
+    if(!checkTexts.length)createText();
+    return;
   }else{
     if(!state)return;
     
-      //タイプミス
-      miss++;
-      missLabel.textContent = miss;
+    //タイプミス
+    miss++;
+    missLabel.textContent = miss;
     return;
   }
   
-  //配列要素が空っぽになったら次の問題を出す
-  if(!checkTexts.length) createText();
 });
-
 };
