@@ -109,10 +109,8 @@ window.addEventListener('keydown', e => {
   if(state !== true){
     return;
   }
-  var i = 0;
+  
   if(e.key === checkTexts[0].textContent) { 
-    i++;
-    if(i == 1) {
     checkTexts[0].className = 'add-blue';
 
     //正解
@@ -127,7 +125,6 @@ window.addEventListener('keydown', e => {
     miss++;
     missLabel.textContent = miss;
     
-  }
   }
   
   //配列要素が空っぽになったら次の問題を出す
