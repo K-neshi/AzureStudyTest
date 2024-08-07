@@ -122,16 +122,14 @@ window.addEventListener('keydown', e => {
     checkTexts.shift();
     //配列要素が空っぽになったら次の問題を出す
     if(!checkTexts.length)createText();
-    return;
+    e.stopImmediatePropagation();
   }else{
     if(!state)return;
     
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    return;
+    e.stopImmediatePropagation();
   }
-  
-  e.stopImmediatePropagation();
 });
 };
