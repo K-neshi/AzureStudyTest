@@ -132,6 +132,6 @@ window.addEventListener('keydown', e => {
     return;
   }
   
-  return;
+  e.stopImmediatePropagation();
 });
 };
