@@ -106,25 +106,31 @@ function createText() {
 
 //キーボードからの入力は「e.key」に格納されている
 window.addEventListener('keydown', e => {
+  var i = 0;
   if(state !== true){
     return;
   }
-  
-  if(e.key === checkTexts[0].textContent) { 
+
+  if(e.key === checkTexts[0].textContent) {
+    i++; 
     checkTexts[0].className = 'add-blue';
 
-    //正解
-    score++;
-    scoreLabel.textContent = score;
+    if(i == 1) {
+      //正解
+      score++;
+      scoreLabel.textContent = score;
     
-    //0番目の配列要素を削除して、次の1文字を比較対象にする
-    checkTexts.shift();
+      //0番目の配列要素を削除して、次の1文字を比較対象にする
+      checkTexts.shift();
+    }    
   }else{
-    
-    //タイプミス
-    miss++;
-    missLabel.textContent = miss;
-    
+    i++; 
+
+    if(i == 1) {
+      //タイプミス
+      miss++;
+      missLabel.textContent = miss;
+    }
   }
   
   //配列要素が空っぽになったら次の問題を出す
