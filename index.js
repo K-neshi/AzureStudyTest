@@ -135,8 +135,8 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkTexts.length) createText();
+  i = 0;
   
 });
 
-i = 0;
 };
