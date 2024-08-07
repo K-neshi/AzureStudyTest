@@ -27,7 +27,6 @@ let score;
 let miss;
 
 var checkTexts = [];
-var i;
 
 function btnpush() {
   //各項目の初期化
@@ -54,7 +53,6 @@ function btnpush() {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
-  i = 0;
   if(TIME <= 0) finish();
 }, 1000);
 
@@ -86,7 +84,6 @@ function finish() {
 }
 
 function createText() {
-  i = 0;
   //ランダムに問題を出題
   rnd = Math.floor(Math.random() * textLists.length);
   //全問題数をカウント
@@ -115,10 +112,8 @@ window.addEventListener('keydown', e => {
 
   if(e.key === checkTexts[0].textContent) {
     if(!state)return;
-    i++; 
     checkTexts[0].className = 'add-blue';
 
-    if(i !== 1)return;
       //正解
       score++;
       scoreLabel.textContent = score;
@@ -127,9 +122,7 @@ window.addEventListener('keydown', e => {
       checkTexts.shift(); 
   }else{
     if(!state)return;
-    i++; 
-
-    if(i !== 1)return;
+    
       //タイプミス
       miss++;
       missLabel.textContent = miss;
