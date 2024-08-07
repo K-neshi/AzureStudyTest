@@ -54,6 +54,7 @@ function btnpush() {
 //制限時間のカウント
 const countdown = setInterval(function() {
   timer.textContent = '制限時間：' + --TIME + '秒';
+  i = 0;
   if(TIME <= 0) finish();
 }, 1000);
 
@@ -135,8 +136,6 @@ window.addEventListener('keydown', e => {
   
   //配列要素が空っぽになったら次の問題を出す
   if(!checkTexts.length) createText();
-  i = 0;
-  
 });
 
 };
