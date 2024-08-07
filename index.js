@@ -20,7 +20,7 @@ const textLists = [
 
 let TIME;
 let count;
-let state = true;
+let state = false;
 let rnd;
 
 let score;
@@ -86,6 +86,7 @@ function finish() {
 }
 
 function createText() {
+  i = 0;
   //ランダムに問題を出題
   rnd = Math.floor(Math.random() * textLists.length);
   //全問題数をカウント
@@ -113,6 +114,7 @@ window.addEventListener('keydown', e => {
   }
 
   if(e.key === checkTexts[0].textContent) {
+    if(!state)return;
     i++; 
     checkTexts[0].className = 'add-blue';
 
@@ -125,6 +127,7 @@ window.addEventListener('keydown', e => {
       checkTexts.shift();
     }    
   }else{
+    if(!state)return;
     i++; 
 
     if(i == 1) {
