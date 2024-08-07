@@ -128,7 +128,6 @@ window.addEventListener('keydown', e => {
     //タイプミス
     miss++;
     missLabel.textContent = miss;
-    break;
   }
   
 });
