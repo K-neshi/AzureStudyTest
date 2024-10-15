@@ -556,6 +556,8 @@ function finish() {
   
 　//正確率を算出
   const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
+  //得点を算出（正しく打ったキーの数 - ミスタイプ数 = 得点）
+　const point = score - miss
   
 　//text2要素作成
 　var newElement3 = document.createElement("h2"); // h2要素作成
