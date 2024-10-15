@@ -566,7 +566,7 @@ function finish() {
   text2 = document.getElementById('text2');
 　
   text.textContent = 'ゲーム終了！';
-  text2.textContent = '正確率は' + Math.round(accuracy) + '%でした！';
+  text2.textContent = 'あなたの得点は' + point + '点でした！正確率は' + Math.round(accuracy) + '%でした！';
 
   //ボタン作成
   var newElement2 = document.createElement("input"); // input要素作成
