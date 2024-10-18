@@ -522,7 +522,7 @@ let miss;
 
 var checkTexts = [];
 
-//プレーヤーネームを入力するテキストボックスの制御
+//プレーヤーネームを入力するテキストボックス関連の制御
 //イベント関数を無効にする
 const disableEvent = e => {
   e.preventDefault();
@@ -558,7 +558,9 @@ function btnpush() {
   scoreLabel.textContent = score;
   missLabel.textContent = miss;
   checkTexts = [];
-  
+
+  //プレーヤーネームを入力するテキストボックスの削除処理
+  input.remove();
   //ボタン削除処理
   btn.remove();
 
