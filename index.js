@@ -7,6 +7,7 @@ const timer = document.getElementById('timer');
 const resultLabel = document.getElementById("result");
 const scoreLabel = document.getElementById("score");
 const missLabel = document.getElementById("miss");
+const input = document.getElementById("textbox");
 
 const textLists = [
   'apple',
@@ -520,6 +521,32 @@ let score;
 let miss;
 
 var checkTexts = [];
+
+//プレーヤーネームを入力するテキストボックスの制御
+//イベント関数を無効にする
+const disableEvent = e => {
+  e.preventDefault();
+  e.stopPropagation();
+};
+//ペーストを無効にする
+input.addEventListener("paste", disableEvent);
+//ドラッグ&ドロップを無効にする
+input.addEventListener("drop", disableEvent);
+//文字列を削除する
+input.addEventListener("keyup", function(e) {
+  let tmp = [];
+  this.value.split("").forEach(function(item, i) {    
+    if (item.match(/^[\u3040-\u309f]+$/)) {
+      tmp.push(item);
+    }
+  });
+  if (tmp.length > 0) {
+    this.value = tmp.join("");
+  } else {
+    this.value = "";
+  }
+});
+
 
 function btnpush() {
   //各項目の初期化
