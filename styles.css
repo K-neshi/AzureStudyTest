@@ -42,3 +42,7 @@ span {
     position: absolute;
     font-weight: 200;
 }
+#textbox {
+  padding: 0.5rem;
+  width: 20rem;
+}
