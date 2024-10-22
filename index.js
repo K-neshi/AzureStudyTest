@@ -520,6 +520,8 @@ let rnd;
 let score;
 let miss;
 
+let kaisuu;
+
 var checkTexts = [];
 
 //プレーヤーネームを入力するテキストボックス関連の制御
@@ -596,14 +598,18 @@ function finish() {
   text.textContent = 'ゲーム終了！';
   text2.textContent = input.value + 'の得点は' + Math.max(point, 0) + '点でした！正確率は' + Math.round(accuracy) + '%でした！';
 
-  //ボタン作成
-  var newElement2 = document.createElement("input"); // input要素作成
-  newElement2.setAttribute("id","btn"); // input要素にidを設定
-  newElement2.setAttribute("type","button"); // input要素にtypeを設定
-  newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
-  newElement2.setAttribute("onclick","btnpush()"); // input要素にonclickを設定
-  element.append(newElement2);// element要素の後に追加
-  btn = document.getElementById('btn');
+  kaisuu++;
+
+  if (kaisuu <= 2) {
+    //ボタン作成
+    var newElement2 = document.createElement("input"); // input要素作成
+    newElement2.setAttribute("id","btn"); // input要素にidを設定
+    newElement2.setAttribute("type","button"); // input要素にtypeを設定
+    newElement2.setAttribute("value","ゲーム再挑戦"); // input要素にvalueを設定
+    newElement2.setAttribute("onclick","btnpush()"); // input要素にonclickを設定
+    element.append(newElement2);// element要素の後に追加
+    btn = document.getElementById('btn');
+  }
   state = false;
 }
 
