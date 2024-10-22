@@ -520,7 +520,7 @@ let rnd;
 let score;
 let miss;
 
-let kaisuu;
+let kaisuu = 0;
 
 var checkTexts = [];
 
