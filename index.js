@@ -599,8 +599,9 @@ function finish() {
   text2.textContent = input.value + 'の得点は' + Math.max(point, 0) + '点でした！正確率は' + Math.round(accuracy) + '%でした！';
 
   kaisuu++;
+  console.log(kaisuu);
 
-  if (kaisuu <= 2) {
+  if (kaisuu < 2) {
     //ボタン作成
     var newElement2 = document.createElement("input"); // input要素作成
     newElement2.setAttribute("id","btn"); // input要素にidを設定
