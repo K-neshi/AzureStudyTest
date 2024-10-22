@@ -524,7 +524,7 @@ let kaisuu = 0;
 
 var checkTexts = [];
 
-//プレーヤーネームを入力するテキストボックス関連の制御
+//プレイヤーネームを入力するテキストボックス関連の制御
 //イベント関数を無効にする
 const disableEvent = e => {
   e.preventDefault();
@@ -550,6 +550,12 @@ input.addEventListener("keyup", function(e) {
 });
 
 function btnpush() {
+  //プレイヤーネームを入力するテキストボックスの入力チェック
+  if (input.value === "") {
+    alert("プレイヤーネームが未入力です。プレイヤーネームは入力必須です。");
+    return false;
+  }
+  
   //各項目の初期化
   TIME = 30;
   count = 0;
@@ -560,7 +566,7 @@ function btnpush() {
   missLabel.textContent = miss;
   checkTexts = [];
 
-  //プレーヤーネームを入力するテキストボックスの削除処理
+  //プレイヤーネームを入力するテキストボックスの削除処理
   input.remove();
   //ボタン削除処理
   btn.remove();
