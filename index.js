@@ -601,7 +601,7 @@ function finish() {
   kaisuu++;
   console.log(kaisuu);
 
-  if (kaisuu < 2) {
+  if (kaisuu < 3) {
     //ボタン作成
     var newElement2 = document.createElement("input"); // input要素作成
     newElement2.setAttribute("id","btn"); // input要素にidを設定
