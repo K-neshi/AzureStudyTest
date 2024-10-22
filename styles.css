@@ -46,6 +46,3 @@ span {
     padding: 0.5rem;
     width: 20rem;
 }
-input:placeholder-shown + button { 
-  display: none;
-}
