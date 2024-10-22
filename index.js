@@ -547,15 +547,6 @@ input.addEventListener("keyup", function(e) {
   }
 });
 
-//プレーヤーネームを入力するテキストボックスに値が入力されているかどうか判定
-function check() {
-  if (input.value === "") {
-    alert("名前が未入力です。");
-    return false;
-  }
-    return true;
-}
-
 function btnpush() {
   //各項目の初期化
   TIME = 30;
