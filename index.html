@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
-  <link rel="stylesheet" href="./styles.css">
-  <title>AzureTest</title>
-  <meta charset="utf-8">
- </head>
- <body>
-  <h1>タイピングゲーム</h1>
-  <h2 id="timer"></h2>
-  <p id="text"></p>
-  <div class="element2" id="element2">
-  <!--<h2 id="text2"></h2>-->
-  </div>
-  <div class="element" id="element">
-  <input type="text" id="textbox" placeholder="プレイヤーネームをひらがなで入力してください。">
-  <input id="btn" type="button" value="ゲーム開始" onclick="btnpush()">
-  </div>
-  <form name="typing">
-   問題数：<h2 id="result">0</h2>
-   正しく打ったキーの数：<h2 id="score">0</h2>
-   ミスタイプ数：<h2 id="miss">0</h2>
-  </form>
-  <!--<h2 id="judg"></h2>-->
-  
-  <script type="text/javascript" src="./index.js"></script>
- </body>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>AzureTest</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>タイピングゲーム</h1>
+    <h2 id="timer"></h2>
+    <p id="text"></p>
+    <div class="element2" id="element2">
+      <!--<h2 id="text2"></h2>-->
+    </div>
+    <div class="element" id="element">
+      <input
+        type="text"
+        class="textbox"
+        id="textbox"
+        placeholder="プレイヤーネームを入力してください。"
+      />
+      <input
+        type="text"
+        class="textbox"
+        id="department_textbox"
+        placeholder="所属を入力してください。"
+      />
+
+      <input id="btn" type="button" value="ゲーム開始" onclick="btnpush()" />
+    </div>
+    <form name="typing">
+      問題数：
+      <h2 id="result">0</h2>
+      正しく打ったキーの数：
+      <h2 id="score">0</h2>
+      ミスタイプ数：
+      <h2 id="miss">0</h2>
+    </form>
+    <!--<h2 id="judg"></h2>-->
+
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
 </html>
