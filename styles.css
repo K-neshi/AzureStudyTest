@@ -1,48 +1,59 @@
 #text {
     font-size: 4em;
     font-weight: bold;
-    color:#666;
+    color: #666;
     text-align: center;
 }
+
 #text2 {
     text-align: center;
-    color:red;
+    color: red;
 }
+
 #timer {
-      text-align: center;
+    text-align: center;
 }
+
 .element {
-      text-align: center;
-} 
-#btn {
-    　font-size: 50%;
-      width: 100px;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 2px solid #000;
-      border-radius: 0;
-      background: #fff;
+    text-align: center;
 }
-#btn:hover {
-      color: #fff;
-      background: #000;
+
+.btn {
+    font-size: 50%;
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+    margin: 10px;
 }
+
+.btn:hover {
+    color: #fff;
+    background: #000;
+}
+
 span {
     transition: all 300ms 0s ease;
 }
+
 .add-blue {
     font-size: 0.5em;
     color: #00f;
 }
- h1 {
+
+h1 {
     text-align: center;
 }
+
 #risutart {
     bottom: 700px;
     position: absolute;
     font-weight: 200;
 }
-#textbox {
+
+.textbox {
     padding: 0.5rem;
     width: 20rem;
 }
