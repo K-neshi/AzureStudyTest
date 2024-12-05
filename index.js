@@ -640,20 +640,17 @@ function btnpush() {
     sendingElement.setAttribute("class", "btn"); // input要素にclassを設定
     sendingElement.setAttribute("type", "button"); // input要素にtypeを設定
     sendingElement.setAttribute("value", "結果を送信"); // input要素にvalueを設定
-    sendingElement.setAttribute("onclick", "send()"); // input要素にonclickを設定
     element.append(sendingElement);// element要素の後に追加
 
     sendingElement.addEventListener('click', () => {
       // 送信するURLを指定
-      // const url = 'https://www.google.com';
       const formurl = 'https://forms.office.com/Pages/ResponsePage.aspx?'
-        + 'v-LL_N6IxEmvkh6VAMsppCuoxA7bGvNErOO1pp5-i5BUMEZHS0RGUlU4RVZVUU1KUERVSlkxTUdHVy4u&r667a4ea02a774a64952a7d85a2a7eabd=' + department.value  // 部署
+        + 'id=v-LL_N6IxEmvkh6VAMsppCuoxA7bGvNErOO1pp5-i5BUMEZHS0RGUlU4RVZVUU1KUERVSlkxTUdHVy4u&r667a4ea02a774a64952a7d85a2a7eabd=' + department.value  // 部署
         + '&rf56a42e4c72748748c17a6c8289b504e=' + input.value // 名前
         + '&r71b87d7965ae405087ba32b8299be2c7=' + Math.max(point, 0);
 
-      alert(formurl);
       // URLにリダイレクト
-      // window.location.href = url;
+      open(formurl);
     });
     sendbtn = document.getElementById('sendbtn');
 
